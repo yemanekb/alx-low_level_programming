@@ -1,83 +1,83 @@
-#include <stdio.h>
-
-
+nclude <stdio.h>
 
 /**
  *
- *  * main - possible combos of 3 digits
+ *  * main - program that prints all possible different combinations
  *
- *   *
+ *   * of thress digits.
  *
- *    * Return (0)
+ *    *
  *
- *     */
-
-
+ *     * Return: 0
+ *
+ *      */
 
 int main(void)
 
 {
 
-		int i, j, k;
+		int i;
+
+			int n;
+
+				int j;
 
 
 
-			for (i = 48; i < 58; i++)
+					for (i = 48; i < 58; i++)
 
-					{
+							{
 
-								for (j = 48; j < 58; j++)
+										for (n = 48; n < 58; n++)
 
-											{
+													{
 
-															for (k = 48; k < 58; k++)
+																	if (n > i)
 
-																			{
+																					{
 
-																								if (i == j || j == k || i == k)
+																										for (j = 48; j < 58; j++)
 
-																													{
+																															{
 
-																																			continue;
+																																					if (j > n)
 
-																																							}
+																																											{
 
-																												putchar(i);
+																																																	putchar(i);
 
-																																putchar(j);
+																																																						putchar(n);
 
-																																				putchar(k);
+																																																											putchar(j);
+
+																																																																if (i == 55 && n == 56 && j == 57)
+
+																																																																						{
+
+																																																																													break;
+
+																																																																																		}
 
 
 
-																																								if (i == 55 && j == 56 && k == 57)
+																																																																					putchar(',');
 
-																																													{
+																																																																										putchar(' ');
 
-																																																			break;
+																																																																															}
+
+																																									}
+
+																													}
+
+																			}
+
+											}
 
 
 
-																																																							}
+						putchar('\n');
 
-																																												else
-
-																																																	{
-
-																																																							putchar(',');
-
-																																																												putchar(' ');
-
-																																																																}
-
-																																															}
-
-																	}
-
-										putchar('\n');
-
-												return (0);
-
-													}
+							return (0);
 
 }

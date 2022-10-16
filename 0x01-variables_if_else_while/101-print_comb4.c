@@ -1,83 +1,35 @@
-nclude <stdio.h>
+#include <stdio.h>
 
 /**
+ * main - Prints 3 combination of numbers
  *
- *  * main - program that prints all possible different combinations
- *
- *   * of thress digits.
- *
- *    *
- *
- *     * Return: 0
- *
- *      */
-
+ * Return: Always (Success)
+ */
 int main(void)
-
 {
+	int c, i, k;
 
-		int i;
+	for (c = '0'; c <= '9'; c++)
+	{
+		for (i = '0'; i <= '9'; i++)
+		{
+			for (k = '0'; k <= '9'; k++)
+			{
+				if (c < i && i < k)
+				{
+					putchar(c);
+					putchar(i);
+					putchar(k);
 
-			int n;
-
-				int j;
-
-
-
-					for (i = 48; i < 58; i++)
-
-							{
-
-										for (n = 48; n < 58; n++)
-
-													{
-
-																	if (n > i)
-
-																					{
-
-																										for (j = 48; j < 58; j++)
-
-																															{
-
-																																					if (j > n)
-
-																																											{
-
-																																																	putchar(i);
-
-																																																						putchar(n);
-
-																																																											putchar(j);
-
-																																																																if (i == 55 && n == 56 && j == 57)
-
-																																																																						{
-
-																																																																													break;
-
-																																																																																		}
-
-
-
-																																																																					putchar(',');
-
-																																																																										putchar(' ');
-
-																																																																															}
-
-																																									}
-
-																													}
-
-																			}
-
-											}
-
-
-
-						putchar('\n');
-
-							return (0);
-
+					if (c != '7')
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }

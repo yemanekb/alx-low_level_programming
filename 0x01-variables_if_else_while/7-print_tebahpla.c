@@ -1,43 +1,18 @@
+#include <unistd.h>
 #include <stdio.h>
-
-
-
 /**
- *
- *  * main - Prints a list of numbers
- *
- *   *
- *
- *    * Description: The numbers are all single digits
- *
- *     * Return: Always(0) Success
- *
- *      */
-
-
-
+ * main - Entry point
+ * Description: prints lowercase alphabets in reverse
+ * Return: Always 0 (success)
+ */
 int main(void)
-
 {
+	int a;
 
-		char c = 'z';
-
-
-
-			while (c >= 'a')
-
-					{
-
-								putchar(c);
-
-										c--;
-
-											}
-
-				putchar('\n');
-
-
-
-					return (0);
-
+	for (a = 'z'; a >= 'a'; a--)
+	{
+		putchar(a);
+	}
+	putchar('\n');
+	return (0);
 }

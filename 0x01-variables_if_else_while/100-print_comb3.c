@@ -1,69 +1,31 @@
 #include <stdio.h>
-
-
-
+#include <unistd.h>
 /**
- *
- *  * main - Print 2 digit numbers
- *
- *   *
- *
- *    * Description: Should appear in the formart provided
- *
- *     * Return: Always(0) Success
- *
- *      */
-
-
-
+ * main - Entyr point
+ * Description: prints two digits combination
+ * Return: Always 0 (success)
+ */
 int main(void)
-
 {
+	int c, i;
 
-		int a, b;
+	for (c = '0'; c <= '9'; c++)
+	{
+		for (i = '0'; i <= '9'; i++)
+		{
+			if (c < i)
+			{
+				putchar(c);
+				putchar(i);
 
-
-
-			for (a = 48; a < 58; a++)
-
-					{
-
-								for (b = 48; b < 58; b++)
-
-											{
-
-															putchar(a);
-
-																		putchar(b);
-
-
-
-																				if (a == 57 && b == 57)
-
-																							{
-
-																											break;
-
-																													}
-
-																						else
-
-																									{
-
-																													putchar(',');
-
-																																putchar(' ');
-
-																																		}
-
-																								}
-
-									}
-
-				putchar ('\n');
-
-
-
-					return (0);
-
+				if (c != '8' || (c == '8' && i != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }

@@ -1,55 +1,22 @@
 #include <stdio.h>
-
-
-
+#include <unistd.h>
 /**
- *
- *  * main - alphabet in lowercase, followed by a new line.
- *
- *   *
- *
- *    * Always return(0)
- *
- *     */
-
-
-
+ * main - Entry point
+ * Description: prints alphabet in lowercase then uppercase
+ * Return: Always 0 (success)
+ */
 int main(void)
-
 {
+	int ch;
 
-		char a = 'a';
-
-			char b = 'A';
-
-
-
-				while (a <= 'z')
-
-						{
-
-									putchar(a);
-
-											a++;
-
-												}
-
-					while (b <= 'Z')
-
-							{
-
-										putchar(b);
-
-												b++;
-
-													}
-
-						putchar('\n');
-
-
-
-							return (0);
-
-
-
+	for (ch = 'a'; ch <= 'z'; ch++)
+	{
+		putchar(ch);
+	}
+	for (ch = 'A'; ch <= 'Z'; ch++)
+	{
+		putchar(ch);
+	}
+	putchar('\n');
+	return (0);
 }

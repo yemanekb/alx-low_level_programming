@@ -1,41 +1,24 @@
 #include <stdio.h>
-
-
-
+#include <unistd.h>
 /**
- *
- *  * main - prints out the alphabet in lowercase except for 'qe'
- *
- *   *
- *
- *    * Return (0)
- *
- *     */
-
-
-
+ * main - Entry point
+ * Description: prints lowercase alphabets
+ * Return: Always 0 (success)
+ */
 int main(void)
-
 {
+	int ch;
 
-		char c;
-
-
-
-			for (c = 'a'; c <= 'z'; c++)
-
-
-
-					if (c != 'e' && c != 'q')
-
-								putchar(c);
-
-
-
-				putchar('\n');
-
-
-
-					return (0);
-
+	for (ch = 'a'; ch <= 'z'; ch++)
+	{
+		if (ch != 'e' && ch != 'q')
+		{
+			putchar(ch);
+		}
+		else
+		{
+		}
+	}
+	putchar('\n');
+	return (0);
 }

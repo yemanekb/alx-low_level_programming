@@ -2,6 +2,7 @@
 
 /**
  * _islower - check for lowercase character
+ * @c: letter being tested
  * Returm: always 0
  */
 

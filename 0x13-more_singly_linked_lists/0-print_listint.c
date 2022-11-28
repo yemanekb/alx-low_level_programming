@@ -20,5 +20,4 @@ size_t print_listint(const listint_t *h)
 	}
 	return (num_of_nodes);
 }
-Footer
-© 2022 Gi
+
